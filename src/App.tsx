@@ -1,6 +1,8 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import { toast } from 'sonner'
 import './App.css'
+import { Toaster } from '@/components/ui/sonner'
 
 function App() {
   return (
@@ -15,10 +17,12 @@ function App() {
       <a
         href="#"
         className="px-8 py-3 bg-white text-purple-700 font-semibold rounded-full shadow-lg hover:bg-purple-100 transition"
+        onClick={()=>{toast("Shadcn works!")}}
       >
         Get Started
       </a>
     </div>
+    <Toaster position="top-center" />
     </>
   )
 }
